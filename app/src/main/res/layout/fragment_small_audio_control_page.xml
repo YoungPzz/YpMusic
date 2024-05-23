@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    >
+
+    <!--分割线-->
+    <include layout="@layout/divider_small" />
+
+    <!--内容容器-->
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/d16"
+        android:background="?attr/colorLightWhite"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--ViewPager2使用到这里有内存泄漏
+        所以暂时用ViewPager-->
+<!--        <androidx.viewpager.widget.ViewPager-->
+<!--            android:id="@+id/list"-->
+<!--            android:overScrollMode="never"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="@dimen/d40"/>-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/icon"
+                android:src="@drawable/logo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:text="爱拼才会赢"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+        <!--播放暂停按钮-->
+        <ImageView
+            android:id="@+id/play"
+            android:scaleType="centerInside"
+            android:src="@drawable/selector_play_small"
+            android:padding="@dimen/d12"
+            app:tint="?attr/colorPrimary"
+            android:layout_width="@dimen/d50"
+            android:layout_height="@dimen/d50" />
+
+        <!--播放列表按钮-->
+        <ImageView
+            android:id="@+id/list_button"
+            android:padding="@dimen/d12"
+            android:src="@drawable/music_list"
+            app:tint="?attr/colorPrimary"
+            android:layout_width="@dimen/d50"
+            android:layout_height="@dimen/d50" />
+    </LinearLayout>
+
+    <!--进度条-->
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/shape_seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d1" />
+</LinearLayout>

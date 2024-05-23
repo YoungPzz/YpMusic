@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--    正方形容器-->
+    <!--    centerCrop等比缩放-->
+    <superui.text.SquareLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder" />
+            <!--            点击数容器-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/d5"
+                android:layout_marginRight="@dimen/d5"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/d15"
+                    android:layout_height="@dimen/d15"
+                    android:src="@drawable/play"
+                    app:tint="?attr/colorLightWhite" />
+
+                <TextView
+                    android:id="@+id/more_sheet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d10"
+                    app:tint="?attr/colorLightWhite" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </superui.text.SquareLinearLayout>
+    <TextView
+        android:layout_marginTop="@dimen/d10"
+        android:layout_marginBottom="@dimen/d5"
+        android:textSize="@dimen/text_meddle"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="?attr/colorOnSurface"
+        android:id="@+id/textHere"
+        android:text="啦啦啦啦啦啦啦啦啦啦啦啦我活动i手大红ID好气哦我活动i大神大神的大大神大神的萨达"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>

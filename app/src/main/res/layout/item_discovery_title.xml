@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_outer"
+    >
+    <TextView
+        android:textSize="@dimen/d16"
+        android:textStyle="bold"
+        android:id="@+id/title"
+        tools:text="标题"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/more"
+        style="@style/Widget.Material3.Button.UnelevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/d32"
+        android:backgroundTint="?attr/colorSurface"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:insetLeft="0dp"
+        android:insetRight="0dp"
+        android:text="@string/more"
+        android:textColor="@color/black80"
+        android:textSize="@dimen/text_small"
+        app:icon="@drawable/more"
+        app:iconSize="@dimen/d15"
+        app:iconTint="@color/black80"
+        app:iconGravity="end"
+        app:strokeWidth="0.5dp"
+        />
+
+</LinearLayout>

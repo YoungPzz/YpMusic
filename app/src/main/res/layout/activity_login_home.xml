@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/d32"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--       需要正方形，来一个约束布局,子布局宽高一致    -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--           顶部-->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBaseline_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="H,1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="@dimen/d100"
+                    android:layout_height="@dimen/d100"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/logo"
+                    app:cornerRadius="@dimen/d5" />
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/padding_large"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/phone_login"
+                style="@style/SuperButton.Primary"
+                android:text="@string/phone_login"
+                app:cornerRadius="@dimen/d27_5" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/username_login"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d55"
+                android:layout_marginTop="@dimen/d32"
+                android:text="@string/username_login"
+                android:textSize="@dimen/d15"
+                app:cornerRadius="@dimen/d27_5" />
+
+            <LinearLayout
+                android:id="@+id/other_login_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d50"
+                android:layout_marginBottom="@dimen/padding_large"
+                android:orientation="horizontal">
+                <!--               微信-->
+                <ImageView
+                    android:id="@+id/wechat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:src="@drawable/login_wechat"/>
+
+                <!--占位控件-->
+                <include layout="@layout/fill" />
+
+                <!--QQ登录按钮-->
+                <ImageView
+                    android:id="@+id/qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:src="@drawable/selector_login_qq" />
+
+                <!--占位控件-->
+                <include layout="@layout/fill" />
+
+                <!--微博登录按钮-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:src="@drawable/selector_login_weibo" />
+
+                <!--占位控件-->
+                <include layout="@layout/fill" />
+
+                <!--网易邮箱登录按钮-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:src="@drawable/selector_login_netease" />
+            </LinearLayout>
+
+            <!--用户协议-->
+            <TextView
+                android:id="@+id/user_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/padding_meddle"
+                android:textSize="@dimen/text_small"
+                android:text="@string/user_agreement_now" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

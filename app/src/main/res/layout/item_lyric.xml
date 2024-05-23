@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    xmlns:tools="http://schemas.android.com/tools">
+<!--    使用 TextView 实现-->
+    <TextView
+        android:id="@+id/content"
+        tools:text="在几百年前说过我爱你"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/lyric_size"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

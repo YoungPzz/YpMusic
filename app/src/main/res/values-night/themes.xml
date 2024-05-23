@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.YPCloundMusic" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:colorBackground">@color/black17</item>
+        <item name="colorLightWhite">@color/black183</item>
+<!--分割线颜色-->
+        <item name="colorDivider">@color/black183</item>
+<!--        TabBar颜色-->
+        <item name="colorTabBar">@color/black31</item>
+    </style>
+</resources>

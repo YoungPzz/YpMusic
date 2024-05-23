@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ixuea="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/d30"
+    android:orientation="vertical">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include layout="@layout/divider_small" />
+    <!--region 底部tab-->
+    <!--底部tab
+    tl_indicator_color：高亮颜色
+    tl_textSelectColor：设置字体选中颜色
+    tl_textUnselectColor：设置字体未选中颜色-->
+    <!--指示器-->
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/guide_indicator_height"
+        ixuea:ci_drawable="@drawable/shape_color_primary"
+        ixuea:ci_drawable_unselected="@drawable/shape_circle_light_grey" />
+    <!--endregion-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+        <!--        占位-->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <!--        登录注册按钮-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_or_register"
+            style="@style/SuperButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/d130"
+            android:text="@string/login_or_register" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!--立即体验按钮-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/experience_now"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/d55"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/d5"
+            android:layout_toRightOf="@+id/select_image"
+            android:backgroundTint="?attr/colorLightWhite"
+            android:minWidth="@dimen/button_width_large"
+            android:text="@string/experience_now"
+            android:textColor="@color/black80"
+            android:textSize="@dimen/text_small"
+            app:strokeColor="?attr/colorPrimary"
+            app:strokeWidth="@dimen/d1" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

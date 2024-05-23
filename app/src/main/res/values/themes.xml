@@ -1,0 +1,102 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.YPCloundMusic" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!--背景色-->
+        <item name="android:colorBackground">@color/black183</item>
+
+        <!--主色调，按钮默认填充颜色-->
+        <item name="colorPrimary">@color/primary</item>
+
+        <!-- 次色调，例如floatActionButton背景，SeekBar进度颜色 -->
+        <item name="colorSecondary">@color/primary</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="colorLightWhite">@color/white</item>
+
+        <!-- 分割线颜色 -->
+        <item name="colorDivider">@color/black183</item>
+
+        <!-- tab bar控件背景 -->
+        <item name="colorTabBar">@color/white</item>
+
+        <!-- 分割线 -->
+        <!--        <item name="android:listDivider">@drawable/shape_divider</item>-->
+
+        <!-- 状态栏颜色 -->
+        <item name="android:statusBarColor" tools:targetApi="l">?android:attr/colorBackground</item>
+
+        <!--Toolbar背景颜色-->
+        <item name="colorToolbar">?attr/colorSurface</item>
+
+        <!--侧滑背景-->
+        <!--        <item name="colorSlideBackground">@color/divider</item>-->
+
+        <!--colorSurface点击颜色-->
+        <!--        <item name="colorSurfaceClick">@color/black130</item>-->
+    </style>
+
+<!--    按钮-->
+    <style name="SuperButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/super_button_height</item>
+    </style>
+
+<!--    主色调按钮-->
+    <style name="SuperButton.Primary">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--多行输入框样式，只有底部边框-->
+    <style name="EditText">
+        <!--图标到内容的间距-->
+        <item name="android:drawablePadding">@dimen/d10</item>
+
+        <item name="android:paddingLeft">@dimen/d10</item>
+        <item name="android:paddingRight">@dimen/d10</item>
+        <item name="android:paddingTop">@dimen/d13</item>
+        <item name="android:paddingBottom">@dimen/d13</item>
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">@dimen/s16</item>
+
+        <item name="android:background">@drawable/selector_edit_text</item>
+    </style>
+
+    <!--单行输入框-->
+    <style name="EditText.SingleLine">
+        <!--最大显示一行-->
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_height">@dimen/d50</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:layout_marginTop">@dimen/padding_small</item>
+    </style>
+
+    <!--单行输入框，圆角边框-->
+    <style name="EditText.SingleLine.Border">
+        <item name="android:background">@drawable/selector_edit_text_border</item>
+        <item name="android:layout_marginTop">@dimen/padding_large</item>
+    </style>
+
+    <!--ShapeableImageView样式-->
+    <!-- 圆角图片 -->
+    <style name="RoundedCornerImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/radius_small</item>
+    </style>
+
+
+
+    <!--toolbar深色-->
+    <style name="SuperTheme.AppBarOverlay.Dark" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="SuperTheme.PopupOverlay.Light" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--toolbar浅色-->
+    <style name="SuperTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
+
+    <style name="SuperTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+ </resources>

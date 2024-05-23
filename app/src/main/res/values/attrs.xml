@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    浅白色：功能是根据主题变化，白天纯白，夜间浅一点-->
+    <attr name="colorLightWhite" format="color"/>
+
+    <attr name="colorDivider"/>
+    <attr name="colorTabBar"/>
+
+    <!--Toolbar背景颜色-->
+    <attr name="colorToolbar" format="color" />
+</resources>
