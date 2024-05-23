@@ -14,7 +14,6 @@ public class BaseTitleActivity<VB extends ViewBinding> extends BaseLoginActivity
     @Override
     protected void initViews() {
         super.initViews();
-
     }
 
     /**
