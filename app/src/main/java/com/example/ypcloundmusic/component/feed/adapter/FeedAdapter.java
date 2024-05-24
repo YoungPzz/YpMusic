@@ -118,8 +118,9 @@ public class FeedAdapter extends BaseQuickAdapter<Feed, BaseViewHolder> {
             });
             listView.setAdapter(adapter);
             listView.setTag(adapter);
-
-            adapter.setNewInstance(data.getMedias());
+            ArrayList<Object> results = new ArrayList<>();
+            results.addAll(data.getMedias());
+            adapter.setNewInstance(results);
         } else {
             holder.setGone(R.id.list, true);
         }

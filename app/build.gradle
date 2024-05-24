@@ -156,6 +156,17 @@ dependencies {
     //图片预览
     implementation 'com.github.wanglu1209:PhotoViewer:0.50'
 
+    // PictureSelector 基础 (必须)
+    //图片选择
+    //https://github.com/LuckSiege/PictureSelector
+    implementation 'io.github.lucksiege:pictureselector:v3.11.2'
+    // 图片压缩 (按需引入)
+    implementation 'io.github.lucksiege:compress:v3.11.2'
+
+    //阿里云oss
+    //官方文档：https://help.aliyun.com/document_detail/32043.html
+    //sdk地址：https://github.com/aliyun/aliyun-oss-android-sdk
+    implementation 'com.aliyun.dpa:oss-android-sdk:2.9.13'
     //以下为测试相关
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

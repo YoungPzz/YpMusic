@@ -34,6 +34,23 @@ public class ImageUtil {
     }
 
     /**
+     * 显示本地图片
+     *
+     * @param context
+     * @param view
+     * @param data
+     */
+    public static void showLocalImage(Context context, ImageView view, String data) {
+        //获取通用配置
+        RequestOptions options = getCommonRequestOptions();
+
+        //使用Glide显示图片
+        Glide.with(context)
+                .load(data)
+                .apply(options)
+                .into(view);
+    }
+    /**
      * 显示绝对地址图片
      *
      * @param context

@@ -72,4 +72,6 @@ public class BaseLogicActivity extends BaseCommonActivity{
     protected void loadData(boolean isPlaceholder) {
 
     }
+
+
 }
