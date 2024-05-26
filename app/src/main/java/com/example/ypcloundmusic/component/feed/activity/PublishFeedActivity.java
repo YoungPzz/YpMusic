@@ -33,6 +33,7 @@ import com.example.ypcloundmusic.component.feed.model.Feed;
 import com.example.ypcloundmusic.component.feed.model.Resource;
 import com.example.ypcloundmusic.component.feed.task.Result;
 import com.example.ypcloundmusic.component.feed.task.UploadFeedImageAsyncTask;
+import com.example.ypcloundmusic.component.loaction.activity.SelectedLocationActivity;
 import com.example.ypcloundmusic.component.main.tab.fragments.FeedFragment;
 import com.example.ypcloundmusic.component.repository.DefaultRepository;
 import com.example.ypcloundmusic.databinding.ActivityPublishFeedBinding;
@@ -158,6 +159,14 @@ public class PublishFeedActivity extends BaseTitleActivity<ActivityPublishFeedBi
             @Override
             public void onItemChildClick(@NonNull BaseQuickAdapter<?, ?> adapter, @NonNull View view, int position) {
                 adapter.removeAt(position);
+            }
+        });
+
+        binding.more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PublishFeedActivity.this, SelectedLocationActivity.class);
+                startActivity(intent);
             }
         });
     }

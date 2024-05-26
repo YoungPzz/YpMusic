@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SuperItemSettingView">
+<!--        //reference是引用-->
+        <attr name="src" format="reference"/>
+        <attr name="title_text" format="string"/>
+        <attr name="more_text" format="string"/>
+        <attr name="more_src" format="reference"/>
+    </declare-styleable>
+
+</resources>

@@ -99,4 +99,114 @@
     <style name="SuperTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
 
     <style name="SuperTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+
+    <!--设置更多图标-->
+    <style name="SuperSettingMore">
+        <item name="android:layout_width">@dimen/d15</item>
+        <item name="android:layout_height">@dimen/d15</item>
+        <item name="android:src">@drawable/super_chevron_right</item>
+        <item name="android:layout_marginLeft">@dimen/padding_outer</item>
+        <item name="tint">@color/super_light_grey</item>
+    </style>
+
+    <!--region 设置-->
+    <!--设置容器卡片，主要是实现圆角-->
+    <style name="SettingCard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardCornerRadius">@dimen/radius_meddle</item>
+        <item name="cardElevation">0dp</item>
+        <item name="android:layout_marginTop">@dimen/padding_outer</item>
+    </style>
+
+    <!--设置卡片内容容器-->
+    <style name="SettingCardContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?attr/colorDivider</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!--设置容器-->
+    <style name="SuperSettingContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginTop">0.5dp</item>
+    </style>
+
+    <!--设置容器，没有点击效果-->
+    <style name="SuperSettingContainer.NoClickable">
+        <item name="android:background">?attr/colorSurface</item>
+    </style>
+
+    <!--设置容器小-->
+    <style name="SuperSettingContainer.NoClickable.Small">
+        <item name="android:layout_marginTop">@dimen/padding_meddle</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:minHeight">10dp</item>
+    </style>
+
+    <!--设置标题次要-->
+    <style name="SuperSettingTitle.Second">
+        <item name="android:textColor">@color/black80</item>
+    </style>
+
+    <!--大设置容器-->
+    <style name="SuperSettingContainer.Large">
+        <item name="android:minHeight">55dp</item>
+    </style>
+
+    <!--设置Icon-->
+    <style name="SuperSettingIcon">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="tint">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="SuperSettingIcon.Large">
+        <item name="android:layout_width">@dimen/d30</item>
+        <item name="android:layout_height">@dimen/d30</item>
+        <item name="tint">@null</item>
+    </style>
+
+    <!--设置标题-->
+    <style name="SuperSettingTitle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">@dimen/super_text_large</item>
+    </style>
+
+    <!--设置标题-->
+    <style name="SuperSettingTitle.Input">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_weight">0</item>
+        <item name="android:minWidth">@dimen/d100</item>
+    </style>
+
+    <!--设置大更多文本-->
+    <style name="SuperSettingValue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/super_light_grey</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--设置更多小文本-->
+    <style name="SuperSettingValueSmall">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/super_light_grey</item>
+        <item name="android:textSize">@dimen/super_text_small</item>
+    </style>
  </resources>

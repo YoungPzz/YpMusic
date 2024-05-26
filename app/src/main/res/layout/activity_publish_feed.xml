@@ -37,7 +37,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
                 android:layout_margin="@dimen/d16"
-                android:text="@string/feed_count"
+                android:text="@string/hint_count"
                 android:textColor="@color/black80" />
         </RelativeLayout>
 
@@ -51,12 +51,31 @@
 
         <!--分割线-->
         <include layout="@layout/divider_small" />
-<!--    单前位置-->
-<!--        <com.ixuea.superui.setting.SuperItemSettingView-->
-<!--            android:id="@+id/position"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:src="@drawable/location"-->
-<!--            app:title_text="@string/current_position" />-->
+
+        <LinearLayout
+            android:id="@+id/setting"
+            style="@style/SuperSettingContainer.Large"
+            android:clickable="false">
+
+            <ImageView
+                android:id="@+id/icon"
+                style="@style/SuperSettingIcon"
+                android:visibility="gone"
+                tools:src="@drawable/super_chevron_right" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/SuperSettingTitle"
+                android:text="当前位置" />
+
+            <TextView
+                android:id="@+id/more"
+                style="@style/SuperSettingValue"
+                android:text="选择位置" />
+
+            <ImageView
+                android:id="@+id/more_icon"
+                style="@style/SuperSettingMore" />
+        </LinearLayout><!--/一个设置-->
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

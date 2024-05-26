@@ -167,6 +167,16 @@ dependencies {
     //官方文档：https://help.aliyun.com/document_detail/32043.html
     //sdk地址：https://github.com/aliyun/aliyun-oss-android-sdk
     implementation 'com.aliyun.dpa:oss-android-sdk:2.9.13'
+
+    //高德地图，这里引用的是3d
+    //https://lbs.amap.com/api/android-sdk/guide/create-project/android-studio-create-project#gradle_sdk
+    implementation 'com.amap.api:3dmap:9.2.0'
+
+    //定位功能
+    implementation 'com.amap.api:location:+'
+
+    //搜索
+    implementation 'com.amap.api:search:9.2.0'
     //以下为测试相关
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

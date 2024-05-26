@@ -8,6 +8,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.amap.api.maps.MapsInitializer;
 import com.example.ypcloundmusic.component.login.event.LoginStatusChangedEvent;
 import com.example.ypcloundmusic.component.login.model.Session;
 import com.example.ypcloundmusic.util.MyActivityManager;
@@ -24,6 +25,7 @@ import superui.text.toast.SuperToast;
  */
 public class AppContext extends Application implements Application.ActivityLifecycleCallbacks {
     private static AppContext instance;
+    private boolean isInit = false;
 
     public static AppContext getInstance() {
         return instance;
@@ -62,6 +64,22 @@ public class AppContext extends Application implements Application.ActivityLifec
         EventBus.getDefault().post(new LoginStatusChangedEvent(false));
     }
 
+    public void onInit(){
+        if(!isInit) {
+            /**
+             * 更新隐私合规状态,需要在初始化地图之前完成
+             * @param  context: 上下文
+             * @param  isContains: 隐私权政策是否包含高德开平隐私权政策  true是包含
+             * @param  isShow: 隐私权政策是否弹窗展示告知用户 true是展示
+             * @since  8.1.0
+             *
+             * https://lbs.amap.com/api/android-sdk/guide/create-project/dev-attention#t2
+             */
+            MapsInitializer.updatePrivacyShow(getApplicationContext(),true,true);
+            MapsInitializer.updatePrivacyAgree(getApplicationContext(),true);
+            isInit = true;
+        }
+    }
 
     //region activity生命周期监听
     //如一个activity创建了，会把该activity传来

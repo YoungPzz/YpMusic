@@ -36,6 +36,7 @@ public class MainActivity extends BaseLogicActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        AppContext.getInstance().onInit();
     }
 
     @Override
